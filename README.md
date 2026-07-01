@@ -1,6 +1,6 @@
 # Weshen Data Links
 
-Landing page and marketing site for Weshen Investments Limited — a small Vite + React + Tailwind project that provides data links and marketing content.
+Landing page and marketing site for Weshen Data Links, small Vite + React + Tailwind project that provides data links and marketing content.
 
 ## Quick Start
 

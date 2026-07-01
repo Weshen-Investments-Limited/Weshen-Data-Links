@@ -3,28 +3,24 @@ import { Star, Quote } from 'lucide-react'
 const testimonials = [
   {
     name: 'Sarah Kamau',
-    location: 'Nairobi',
     role: 'Remote Worker',
     content: 'I switched to Weshen for my work-from-home setup and the difference is incredible. Video calls are crystal clear, no more buffering. The installation was done the same day I called!',
     rating: 5
   },
   {
     name: 'James Omondi',
-    location: 'Mombasa',
     role: 'Gaming Enthusiast',
     content: 'As a gamer, low latency is everything. Weshen delivers exactly what they promise. My ping times have never been better. Best internet provider I\'ve used in Kenya.',
     rating: 5
   },
   {
     name: 'Mary Wanjiku',
-    location: 'Kisumu',
     role: 'Small Business Owner',
     content: 'Running my cafe requires reliable internet for orders and payments. Weshen has been 100% reliable. Their customer support is also excellent - always helpful and quick.',
     rating: 5
   },
   {
     name: 'David Kimani',
-    location: 'Nakuru',
     role: 'Content Creator',
     content: 'Uploading large video files used to take hours. Now it\'s done in minutes. The Diamond plan is perfect for my needs. Highly recommend for anyone working with media.',
     rating: 5
@@ -72,7 +68,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="font-semibold text-primary text-sm">{testimonial.name}</div>
-                  <div className="text-gray-500 text-xs">{testimonial.role} • {testimonial.location}</div>
+                  <div className="text-gray-500 text-xs">{testimonial.role} </div>
                 </div>
               </div>
             </div>
