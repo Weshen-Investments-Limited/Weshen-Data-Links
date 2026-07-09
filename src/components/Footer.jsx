@@ -1,5 +1,6 @@
-import { Wifi, Mail, Send } from 'lucide-react'
+import { Mail, Send } from 'lucide-react'
 import { useState } from 'react'
+import logo from '../assets/images/weshen-data-links-logo.jpeg'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -19,11 +20,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                <Wifi className="text-primary" size={24} />
-              </div>
-              <span className="text-white font-bold text-2xl">WESHEN</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src={logo} 
+                alt="Weshen Data Links Logo" 
+                className="w-12 h-12 rounded-full object-cover"
+              />
+              <span className="text-white font-bold text-2xl">WESHEN DATA LINKS</span>
             </div>
             <p className="text-gray-300 mb-6">Connecting the world... Your style.</p>
             <p className="text-gray-1 text-sm">
@@ -107,19 +110,22 @@ export default function Footer() {
             )}
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-300 text-sm">
-              © 2026 Weshen Data Links. All rights reserved. Crafted for Kenyan families.
-            </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-300 hover:text-orangeLight transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-300 hover:text-orangeLight transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-300 hover:text-orangeLight transition-colors">Cookie Policy</a>
+        <div className="mt-8 sm:mt-12 border-t border-white/10 pt-6 sm:pt-8">
+            <div className="flex flex-col gap-3 sm:gap-4 text-xs sm:text-sm text-gray-300 md:flex-row md:items-center md:justify-between">
+              <p>&copy; 2026 Weshen Investments Limited. All rights reserved.</p>
+              <p>
+                Developed by{" "}
+                <a
+                  href="http://x-ellentlabs.com/"
+                  className="font-medium text-gray-300 transition-colors hover:text-green-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  X-ellent Labs
+                </a>
+              </p>
             </div>
           </div>
-        </div>
       </div>
     </footer>
   )

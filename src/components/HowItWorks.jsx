@@ -37,7 +37,7 @@ export default function HowItWorks() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Get Connected in 3 Easy Steps</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            From your first call to surfing the web — we make getting fiber internet effortless and fast.
+            From your first call to surfing the web, we make getting fiber internet effortless and fast.
           </p>
         </div>
         

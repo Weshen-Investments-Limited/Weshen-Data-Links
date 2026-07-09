@@ -1,5 +1,7 @@
 import { Wifi, Bolt, MessageCircle, Zap, Shield, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
+
 
 export default function Hero() {
   const [currentWord, setCurrentWord] = useState(0)
@@ -65,7 +67,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => scrollToSection('packages')}
-                className="group bg-gradient-to-r from-accent to-accentHover px-8 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/40 flex items-center justify-center space-x-2"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/40 flex items-center justify-center space-x-2"
               >
                 <span>Explore Plans</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -76,7 +78,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-2 px-8 py-4 rounded-full border-2 border-green-500 text-green-400 font-semibold hover:bg-green-500 hover:text-white transition-all"
               >
-                <MessageCircle size={20} />
+                <FaWhatsapp size={20} />
                 <span>Chat with Sales</span>
               </a>
             </div>

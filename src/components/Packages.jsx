@@ -65,7 +65,7 @@ export default function Packages() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-orange-100 px-4 py-2 rounded-full mb-4">
             <Star className="text-orange-500" size={16} />
-            <span className="text-orange-700 font-semibold text-sm">Flexible Plans</span>
+            <span className="text-orange-700 font-semibold text-sm">Monthly Plans</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Choose Your Perfect Plan</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -128,22 +128,6 @@ export default function Packages() {
               </div>
             )
           })}
-        </div>
-
-        <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 md:p-12 text-white text-center">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Need a Custom Solution?</h3>
-            <p className="text-gray-300 mb-6">
-              Business plans, enterprise solutions, or multi-location setups. We can customize a plan that fits your specific needs.
-            </p>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-flex items-center space-x-2"
-            >
-              <span>Contact Sales</span>
-              <ArrowRight size={18} />
-            </button>
-          </div>
         </div>
       </div>
     </section>

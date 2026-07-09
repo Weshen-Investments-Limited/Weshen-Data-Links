@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: 'What equipment do I need?',
-    answer: 'For most plans, we provide a high-quality router at no additional cost. Our technicians will set up everything during installation. If you have your own compatible router, you can use that as well.'
+    answer: 'For most plans, we provide a high-quality router at an additional cost. Our technicians will set up everything during installation. If you have your own compatible router, you can use that as well.'
   },
   {
     question: 'Do you have data caps or throttling?',

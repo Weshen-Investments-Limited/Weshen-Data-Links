@@ -1,26 +1,93 @@
 import { Phone, MessageCircle, Mail, Globe, Instagram, Facebook, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react'
 import { useState } from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: '',
+    location: '',
+    apartment: '',
+    housenumber: '',
     message: '',
     plan: ''
   })
+  const [errors, setErrors] = useState({})
   const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const validateForm = () => {
+    const newErrors = {}
+    
+    if (!formData.name.trim()) {
+      newErrors.name = 'Full name is required'
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters'
+    }
+    
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required'
+    } else if (!/^(07|01)[0-9]{8}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Please enter a valid Kenyan phone number (07XX XXX XXX)'
+    }
+    
+    if (!formData.location.trim()) {
+      newErrors.location = 'Location is required'
+    }
+    
+    if (!formData.apartment.trim()) {
+      newErrors.apartment = 'Apartment is required'
+    }
+    
+    if (!formData.housenumber.trim()) {
+      newErrors.housenumber = 'House number is required'
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required'
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters'
+    }
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+    
+    if (!validateForm()) {
+      return
+    }
+    
+    // Format message for WhatsApp
+    const planText = formData.plan ? `Plan: ${formData.plan.toUpperCase()}\n` : 'Plan: Not specified\n'
+    const message = `*New Inquiry from Weshen Website*\n\n` +
+      `*Name:* ${formData.name}\n` +
+      `*Phone:* ${formData.phone}\n` +
+      `*Location:* ${formData.location}\n` +
+      `*Apartment:* ${formData.apartment}\n` +
+      `*House Number:* ${formData.housenumber}\n` +
+      `${planText}` +
+      `*Message:* ${formData.message}`
+    
+    // Open WhatsApp with the message
+    const whatsappUrl = `https://wa.me/254796480074?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+    
     setIsSubmitted(true)
     setTimeout(() => setIsSubmitted(false), 3000)
-    setFormData({ name: '', phone: '', email: '', message: '', plan: '' })
+    setFormData({ name: '', phone: '', location: '', apartment: '', housenumber: '', message: '', plan: '' })
+    setErrors({})
   }
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: '' })
+    }
   }
 
   return (
@@ -62,7 +129,7 @@ export default function Contact() {
                   className="flex items-center space-x-4 hover:bg-white/10 p-3 rounded-xl transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
-                    <MessageCircle size={24} />
+                    <FaWhatsapp size={24} />
                   </div>
                   <div>
                     <p className="text-gray-300 text-sm">WhatsApp</p>
@@ -98,8 +165,8 @@ export default function Contact() {
               <div className="flex items-start space-x-3 text-gray-600">
                 <MapPin className="text-orange-500 flex-shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="font-medium text-primary">Nairobi, Kenya</p>
-                  <p className="text-sm mt-1">Westlands Business District<br />Nairobi, Kenya</p>
+                  <p className="font-medium text-primary">Kitengela, Kenya</p>
+                  {/* <p className="text-sm mt-1">Westlands Business District<br />Kitengela, Kenya</p> */}
                 </div>
               </div>
             </div>
@@ -126,7 +193,7 @@ export default function Contact() {
                   <span className="font-bold text-sm">TT</span>
                 </a>
                 <a 
-                  href="https://www.weshen.co.ke" 
+                  href="https://www.datalinks.weshen.co.ke" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-primary hover:bg-gray-200 transition-colors"
@@ -160,7 +227,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full px-4 py-4 rounded-xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
-                        placeholder="John Doe"
+                        placeholder="James Omondi"
                         required
                       />
                     </div>
@@ -177,16 +244,41 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-gray-700 font-medium mb-2">Location</label>
+                      <input 
+                        type="text" 
+                        name="location"
+                        value={formData.location}
+                        onChange={handleChange}
+                        className="w-full px-4 py-4 rounded-xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                        placeholder="Deliverance Road, Kitengela"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-gray-700 font-medium mb-2">Apartment</label>
+                      <input 
+                        type="text" 
+                        name="text"
+                        value={formData.apartment}
+                        onChange={handleChange}
+                        className="w-full px-4 py-4 rounded-xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
+                        placeholder="Stengo 1 Apartment"
+                        required
+                      />
+                    </div>
+                  </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Email Address</label>
+                    <label className="block text-gray-700 font-medium mb-2">House Number</label>
                     <input 
-                      type="email" 
-                      name="email"
-                      value={formData.email}
+                      type="text" 
+                      name="housenumber"
+                      value={formData.housenumber}
                       onChange={handleChange}
                       className="w-full px-4 py-4 rounded-xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
-                      placeholder="john@example.com"
+                      placeholder="House Number 10"
                       required
                     />
                   </div>

@@ -1,5 +1,6 @@
 import { MessageCircle, X, Phone } from 'lucide-react'
 import { useState } from 'react'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +30,7 @@ export default function FloatingChat() {
               rel="noopener noreferrer"
               className="flex items-center space-x-3 bg-green-500 text-white px-4 py-3 rounded-xl hover:bg-green-600 transition-colors"
             >
-              <MessageCircle size={20} />
+              <FaWhatsapp size={20} />
               <span className="font-medium">WhatsApp Us</span>
             </a>
             
@@ -52,12 +53,13 @@ export default function FloatingChat() {
       
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/40 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+        // className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/40 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 sm:p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
       >
         {isOpen ? (
           <X size={28} />
         ) : (
-          <MessageCircle size={28} />
+          <FaWhatsapp size={28} />
         )}
       </button>
     </div>
