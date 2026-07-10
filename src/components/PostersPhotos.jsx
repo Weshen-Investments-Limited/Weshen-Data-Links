@@ -1,14 +1,21 @@
 import { Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
+import image1 from '../assets/images/posters/image1.jpeg'
+import image2 from '../assets/images/posters/image2.jpeg'
+import image3 from '../assets/images/posters/image3.jpeg'
+import image4 from '../assets/images/posters/image4.jpeg'
+import image5 from '../assets/images/posters/image5.jpeg'
+import image6 from '../assets/images/posters/image6.jpeg'
+import image7 from '../assets/images/posters/image7.jpeg'
 
 const posterImages = [
-  { src: '/src/assets/images/posters/image1.jpeg', alt: 'Poster 1' },
-  { src: '/src/assets/images/posters/image2.jpeg', alt: 'Poster 2' },
-  { src: '/src/assets/images/posters/image3.jpeg', alt: 'Poster 3' },
-  { src: '/src/assets/images/posters/image4.jpeg', alt: 'Poster 4' },
-  { src: '/src/assets/images/posters/image5.jpeg', alt: 'Poster 5' },
-  { src: '/src/assets/images/posters/image6.jpeg', alt: 'Poster 6' },
-  { src: '/src/assets/images/posters/image7.jpeg', alt: 'Poster 7' },
+  { src: image1, alt: 'Poster 1' },
+  { src: image2, alt: 'Poster 2' },
+  { src: image3, alt: 'Poster 3' },
+  { src: image4, alt: 'Poster 4' },
+  { src: image5, alt: 'Poster 5' },
+  { src: image6, alt: 'Poster 6' },
+  { src: image7, alt: 'Poster 7' },
 ]
 
 export default function PostersPhotos() {

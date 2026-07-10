@@ -1,11 +1,16 @@
 import { Users } from 'lucide-react'
+import image8 from '../assets/images/our-team/image8.jpeg'
+import image9 from '../assets/images/our-team/image9.jpeg'
+import image10 from '../assets/images/our-team/image10.jpeg'
+import image11 from '../assets/images/our-team/image11.jpeg'
+import image12 from '../assets/images/our-team/image12.jpeg'
 
 const teamImages = [
-  { src: '/src/assets/images/our-team/image8.jpeg', alt: 'Team Member 1' },
-  { src: '/src/assets/images/our-team/image9.jpeg', alt: 'Team Member 2' },
-  { src: '/src/assets/images/our-team/image10.jpeg', alt: 'Team Member 3' },
-  { src: '/src/assets/images/our-team/image11.jpeg', alt: 'Team Member 4' },
-  { src: '/src/assets/images/our-team/image12.jpeg', alt: 'Team Member 5' },
+  { src: image8, alt: 'Team Member 1' },
+  { src: image9, alt: 'Team Member 2' },
+  { src: image10, alt: 'Team Member 3' },
+  { src: image11, alt: 'Team Member 4' },
+  { src: image12, alt: 'Team Member 5' },
 ]
 
 export default function TeamPhotos() {
