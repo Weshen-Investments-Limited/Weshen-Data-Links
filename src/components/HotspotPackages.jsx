@@ -126,13 +126,13 @@ export default function HotspotPackages() {
                   ))}
                 </div>
                 
-                <button 
+                {/* <button 
                   onClick={() => scrollToSection('contact')}
                   className={`w-full ${pkg.popular ? 'bg-gradient-to-r from-secondary to-orange-600' : 'bg-gradient-to-r ' + colors.gradient} py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2`}
                 >
                   <span>Get Connected</span>
                   <ArrowRight size={16} />
-                </button>
+                </button> */}
               </div>
             )
           })}
