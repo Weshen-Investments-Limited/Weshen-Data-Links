@@ -7,6 +7,17 @@ import image4 from '../assets/images/posters/image4.jpeg'
 import image5 from '../assets/images/posters/image5.jpeg'
 import image6 from '../assets/images/posters/image6.jpeg'
 import image7 from '../assets/images/posters/image7.jpeg'
+import image8 from '../assets/images/posters/image8.jpeg'
+import image9 from '../assets/images/posters/image9.jpeg'
+import image10 from '../assets/images/posters/image10.jpeg'
+import image11 from '../assets/images/posters/image11.jpeg'
+import image12 from '../assets/images/posters/image12.jpeg'
+import image13 from '../assets/images/posters/image13.jpeg'
+import image14 from '../assets/images/posters/image14.jpeg'
+import image15 from '../assets/images/posters/image15.jpeg'
+import image16 from '../assets/images/posters/image16.jpeg'
+import image17 from '../assets/images/posters/image17.jpeg'
+import image18 from '../assets/images/posters/image18.jpeg'
 
 const posterImages = [
   { src: image1, alt: 'Poster 1' },
@@ -16,6 +27,17 @@ const posterImages = [
   { src: image5, alt: 'Poster 5' },
   { src: image6, alt: 'Poster 6' },
   { src: image7, alt: 'Poster 7' },
+  { src: image8, alt: 'Poster 8' },
+  { src: image9, alt: 'Poster 9' },
+  { src: image10, alt: 'Poster 10' },
+  { src: image11, alt: 'Poster 11' },
+  { src: image12, alt: 'Poster 12' },
+  { src: image13, alt: 'Poster 13' },
+  { src: image14, alt: 'Poster 14' },
+  { src: image15, alt: 'Poster 15' },
+  { src: image16, alt: 'Poster 16' },
+  { src: image17, alt: 'Poster 17' },
+  { src: image18, alt: 'Poster 18' }
 ]
 
 export default function PostersPhotos() {
