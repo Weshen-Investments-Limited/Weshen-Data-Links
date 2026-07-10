@@ -18,13 +18,11 @@ export default function Navbar({ scrolled }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <div className="relative">
-              <img 
-                src={logo} 
-                alt="Weshen Data Links Logo" 
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shadow-lg border-2 border-white/20"
-              />
-            </div>
+            <img 
+              src={logo} 
+              alt="Weshen Data Links Logo" 
+              className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+            />
             <span className="text-white font-bold text-lg sm:text-xl hidden sm:block">WESHEN DATA LINKS</span>
           </div>
           

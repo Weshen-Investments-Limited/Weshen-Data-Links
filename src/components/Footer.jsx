@@ -21,13 +21,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="relative">
-                <img 
-                  src={logo} 
-                  alt="Weshen Data Links Logo" 
-                  className="w-14 h-14 rounded-xl object-cover shadow-lg border-2 border-white/20"
-                />
-              </div>
+              <img 
+                src={logo} 
+                alt="Weshen Data Links Logo" 
+                className="w-14 h-14 object-contain"
+              />
               <span className="text-white font-bold text-2xl">WESHEN DATA LINKS</span>
             </div>
             <p className="text-gray-300 mb-6">Connecting the world... Your style.</p>
