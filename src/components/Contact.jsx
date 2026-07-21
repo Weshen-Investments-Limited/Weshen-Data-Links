@@ -257,7 +257,6 @@ export default function Contact() {
                         required
                       />
                     </div>
-                    <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-gray-700 font-medium mb-2">Apartment</label>
                       <input 
