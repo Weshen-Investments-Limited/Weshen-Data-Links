@@ -257,18 +257,19 @@ export default function Contact() {
                         required
                       />
                     </div>
+                    <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-gray-700 font-medium mb-2">Apartment</label>
                       <input 
                         type="text" 
-                        name="text"
+                        name="apartment"
                         value={formData.apartment}
                         onChange={handleChange}
                         className="w-full px-4 py-4 rounded-xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
-                        placeholder="Stengo 1 Apartment"
+                        placeholder="Stengo 1, Apartment"
                         required
                       />
-                    </div>
+                    </div>  
                   </div>
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">House Number</label>
